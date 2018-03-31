@@ -1,0 +1,67 @@
+var championship = 'championship';
+
+console.log( championship );
+
+var teams = ['Real Madrid', 'Manchester United', 'PSG', 'Manchester City','Barcelona' ];
+
+console.log( 'Times que estão participando do campeonato: ', teams);
+
+var showPosition = function showTeamPosition(posicao){
+
+    if ( posicao > 0 && posicao <= 5 )
+    {
+        return ' O time que está em ' + posicao + '° lugar é o ' + teams[ posicao - 1 ] + '.';
+    }
+        
+    return 'Não temos a informação do time que está nessa posição.';
+
+};
+
+console.log( showPosition( 1 ) );
+console.log( showPosition( 3 ) );
+console.log( showPosition( 5 ) );
+console.log( showPosition( 6 ) );
+
+var count = 20;
+
+while ( count <= 30 )
+{
+    console.log( count++ );
+}
+
+var convertColorHex = function convertToHex(cor){
+
+   
+   var hexa;
+
+    switch(cor)
+    {
+        case 'red','vermelho':
+           hexa = '#FF0000'
+            break;
+        case 'blue','azul':
+            hexa = '0000FF';
+            break;
+        case 'green','verde':
+            hexa = '00FF00';
+            break;
+        case 'yellow','amarelo':
+            hexa = '#FFFF00';
+            break;
+        case 'purple','roxo':
+            purple = '#800080';
+            break;
+        default:
+            return ' Não temos o equivalente hexadecimal para ' + cor;
+    }    
+        return ' O hexadecimal para a cor ' + cor + ' é ' + hexa + '.';
+};
+
+convertColorHex('red');
+convertColorHex('green');
+convertColorHex('purple');
+convertColorHex('brown');
+convertColorHex('blue');
+convertColorHex('orange');
+convertColorHex('yellow');
+convertColorHex('black');

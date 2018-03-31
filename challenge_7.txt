@@ -1,0 +1,43 @@
+var myArray = [ 1, 'Yuji', { carro: 'Mustang' }, undefined, true ];
+
+var adicionarItem = function addItem(item){
+    myArray.push(item);
+    return myArray;
+};
+
+adicionarItem(['oi', true, 20, null]);
+
+console.log(myArray);
+
+console.log('O segundo elemento do segundo array é ' + myArray[5][1]);
+
+var key = myArray.length;
+console.log('O primeiro array tem ' + key + ' itens.' );
+
+var key2 = myArray[5].length;
+console.log('O segundo array tem ' + key2 + ' itens.');
+
+var count = 10;
+
+    while ( count <= 20 ){
+        count % 2 == 0 ? console.log(count) : '';
+        count++;
+    }
+
+var count = 10;
+
+    while (count <= 20 ){
+        count % 2 != 0 ? console.log(count) : '';
+        count++;
+    }
+
+console.log( 'Números pares entre 100 e 120' );
+    for ( var count = 100; count <= 120; count++){
+        count % 2 == 0 ? console.log(count) : '';
+    }
+
+console.log( 'Números impares entre 111 e 125');
+    for ( var count = 111; count <= 125; count++){
+        count % 2 != 0 ? console.log(count) : '';
+    }
+

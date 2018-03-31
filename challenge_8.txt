@@ -1,0 +1,63 @@
+var sum = function sum(){
+    function calculateSum( x, y)
+    {
+        return x + y;
+    }
+   return calculateSum;
+};
+
+var valor = 2;
+var valor2 = 4;
+sum();
+console.log( 'A soma de ' + valor + ' e ' + valor2 + ' é igual a ' + sum()(valor,valor2) + '.' );
+
+console.log ( 'O nome da função que faz a soma é ' + sum().name );
+
+function showName(){
+    return 'Lucas Yuji Yoshimine';
+}
+
+var varShowName = showName;
+
+console.log( 'A função ' + varShowName.name + ' retorna ' + varShowName() + '.' );
+
+
+function calculator(operator){
+    function opComplete(x, y){
+        var result;
+        switch(operator){
+            case '+':
+                result = x + y;
+                break;
+            case '-':
+                result = x - y;
+                break;
+            case '*':
+                result = x * y;
+                break;
+            case '/':
+                result = x / y;
+                break;
+            case '%':
+                result = x % y;
+                break;
+            default:
+                return ' Operação inválida ';
+        }
+        return 'Resultado da operação: ' + x + ' ' + operator + ' ' + y + ' = ' + result + '.';
+    }
+    return opComplete;
+}
+
+var sum = calculator('+'); 
+
+console.log( sum( 2, 5 ) );
+
+var subtraction = calculator('-') );
+console.log( subtraction( 5, 3 ) );
+var multiplication = calculator('*') );
+console.log( multiplication( 2, 3 ) );
+var division = calculator('/') );
+console.log( division( 6, 2 ) );
+var mod = calculator('%') );
+console.log( mod( 5, 2 ) );

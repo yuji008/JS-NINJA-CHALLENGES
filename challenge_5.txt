@@ -1,0 +1,47 @@
+var myvar = [ 1 , 3, 4 ];
+
+function myFunction(param){
+	return param;
+}
+
+myFunction(myvar)[1];
+
+
+function myFunction2(value, key) {
+	return value[key];
+}
+
+var myArray = [ 1, 'string', true, undefined, null ];
+
+myFunction(myArray);
+
+
+function book(arg){
+		var objeto = 
+		{
+		
+			DomCasmurro:{
+				quantidadePaginas: 200,
+				autor: 'Machado de Assis',
+				editora: 'Dom Casmurro'
+			},
+			Senhora:{
+				quantidadePaginas: 115,
+				autor: 'Jose de alencar',
+				editora: 'senhora'
+			},
+			Seminarista:{
+				quantidadePaginas: 150,
+				autor: 'Bernado de Guimarães',
+				editora: 'O seminarista'
+			}
+		};
+	
+			if ( !arg ) {
+				return objeto;
+			}
+			
+			return objeto[arg];
+}
+
+book().DomCasmurro;
